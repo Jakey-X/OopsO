@@ -20,41 +20,13 @@ cat << EOF > /usr/local/etc/xray/config.json
     "inbounds": [
         {
             "port": ${PORT},
-            "protocol": "vless",
-            "settings": {
-                "clients": [
-                    {
-                        "id": "$ID",
-                        "level": 0,
-                        "email": "love@v2fly.org"
-                    }
-                ],
-                "decryption": "none"
-            },
-            "streamSettings": {
-                "network": "ws",
-                "allowInsecure": false,
-                "wsSettings": {
-                  "path": "/$ID-vless"
-                }
-            },
-            "sniffing": {
-                "enabled": true,
-                "destOverride": [
-                     "http",
-                     "tls"
-                ]
-            }
-        },
-        {
-            "port": ${PORT},
             "protocol": "trojan",
             "settings": {
                 "clients": [
                     {
                         "password":"$ID",
                         "level": 0,
-                        "email": "love@v2fly.org"
+                        "email": "t@t.t"
                     }
                 ],
                 "decryption": "none"
@@ -63,7 +35,7 @@ cat << EOF > /usr/local/etc/xray/config.json
                 "network": "ws",
                 "allowInsecure": false,
                 "wsSettings": {
-                  "path": "/$ID-trojan"
+                  "path": "/$ID-tro"
                 }
             },
             "sniffing": {
